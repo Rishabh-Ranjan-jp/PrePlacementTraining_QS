@@ -59,7 +59,7 @@ do-while is preferred when you need to execture the instructions within the bloc
 #### for-loop
 
 ```java
-for(initialization; condition; update;){
+for(initialization; condition; update){
     instructions    
 }
 ```
