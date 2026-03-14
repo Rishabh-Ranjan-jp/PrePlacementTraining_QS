@@ -1,5 +1,7 @@
-class printMultiplesof2_10{
-    public static void main(String[] args){
+package solutions;
+
+public class PrintMultiplesof10{
+    public static void run(){
         int lowerLimit = 30;
         int upperLimit = 101;
         System.out.print("All the numbers divisible by 2 and 5: ");

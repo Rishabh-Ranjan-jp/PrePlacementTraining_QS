@@ -1,5 +1,7 @@
-class prodNum{
-    public static void main(String[] args){
+package solutions;
+
+public class ProdEvenNum{
+    public static void run(){
         int prod = 1;
         int factor = 2;
         int i = 1;

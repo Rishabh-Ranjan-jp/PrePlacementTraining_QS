@@ -1,5 +1,7 @@
-class printTables{
-    public static void main(String[] args){
+package solutions;
+
+public class PrintTables{
+    public static void run(){
         for(int i = 1; i<4; i++){
             System.out.println("Printing the table of "+i);
             int j = 1;

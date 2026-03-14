@@ -1,5 +1,7 @@
-class printLowercase{
-    public static void main(String[] args){
+package solutions;
+
+public class PrintLowercase{
+    public static void run(){
         char i = 'a';
         char j = 'z';
         System.out.println("Printing lowercase alphabets vertically: ");

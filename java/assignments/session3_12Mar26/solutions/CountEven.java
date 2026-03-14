@@ -1,5 +1,7 @@
-class countEven{
-    public static void main(String[] args){
+package solutions;
+
+public class CountEven{
+    public static void run(){
         int count = 0;
         for(int i = 2; i<101; i+=2)
             count++;

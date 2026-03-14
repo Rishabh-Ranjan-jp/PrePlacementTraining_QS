@@ -1,5 +1,7 @@
-class printSumofTen{
-    public static void main(String[] args){
+package solutions;
+
+public class PrintSumofTen{
+    public static void run(){
         int n = 11;
         System.out.print("Sum of number from 1 to 10 is ");
         int sum = 0;

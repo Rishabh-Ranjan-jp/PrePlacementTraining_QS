@@ -1,5 +1,7 @@
-class printProdofNums{
-    public static void main(String[] args){
+package solutions;
+
+public class ProductofNums{
+    public static void run(){
         int n = 5;
         int prod = 1;
         for(int i = 2; i<=n; i++)

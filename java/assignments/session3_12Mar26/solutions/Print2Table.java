@@ -1,5 +1,7 @@
-class print2Table{
-    public static void main(String[] args){
+package solutions;
+
+public class Print2Table{
+    public static void run(){
         int i = 1;
         System.out.println("Printing 2's table: ");
         while(i<11){

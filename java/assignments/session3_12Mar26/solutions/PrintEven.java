@@ -1,5 +1,7 @@
-class printEven{
-    public static void main(String[] args){
+package solutions;
+
+public class PrintEven{
+    public static void run(){
         System.out.print("Even numbers between 1 to 20: ");
         for(int i = 1; i<21; i++){ //could just start at 2, and then put i+=2 and print without checking as well.
             if(i%2 == 0)
