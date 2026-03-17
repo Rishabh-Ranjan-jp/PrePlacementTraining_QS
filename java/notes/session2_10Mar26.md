@@ -1,4 +1,4 @@
-Trainer: Pawan Kumar | Java [AN: 1315 - 1600]
+Trainer: Pavan Kumar | Java [AN: 1315 - 1600]
 
 ---
 

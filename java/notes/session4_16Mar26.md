@@ -113,17 +113,11 @@ Formal arguments are simply variables that are declared during method declaratio
 
 *Actual arguments* are the actual variables that are passed to the method when they are called.
 
-
-
 Advantage: Data can be passed into the method.
 
 Disadvantage: The method cannot be called safely unless the method signature and type are known.
 
-
-
 The JRE starts the execution of the main method and then methods can be called within the main method for execution.
-
-
 
 #### Return statement
 
@@ -137,8 +131,6 @@ The JRE starts the execution of the main method and then methods can be called w
 
 4. return is optional with void type methods.
 
-
-
 Valid ways to return for various types: 
 
 ```java
@@ -149,7 +141,7 @@ public void demo(){
 
 ```java
 public void demo(){
-    
+
 }
 ```
 
@@ -181,7 +173,7 @@ public double demo(){
 
 ```java
 public double demo(){
-   
+
 }
 ```
 
@@ -215,12 +207,6 @@ Members are composed of
     //statements
 }
 ```
-
-
-
-
-
-
 
 ---
 
@@ -404,5 +390,3 @@ Members are composed of
    4 is Prime: false
    278347 is Prime: true
    ```
-
-
