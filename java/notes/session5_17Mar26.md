@@ -209,7 +209,7 @@ The `new` keyword returns the address of the constructed block to the `objectNam
    }
    
    class Car{
-       
+   
        String brand = "Mahindra";
        int windows = 4;
        int seats = 4;
@@ -239,5 +239,8 @@ The `new` keyword returns the address of the constructed block to the `objectNam
    output: 
    
    ```bash
-   
+   Already decelerating...
+   Accelerating now...
+   Already accelerating...
+   Decelerating now...
    ```
