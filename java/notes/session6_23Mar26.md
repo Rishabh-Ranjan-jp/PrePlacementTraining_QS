@@ -1,4 +1,4 @@
-Trainer: Rohit Sharma | Java [FN: 0930 - 1230]
+Trainer: Rohit Kumar | Java [FN: 0930 - 1230]
 
 ---
 
@@ -64,8 +64,6 @@ Both of these, p1, p2 will have the exact same output, since p1 is pointing to a
 
 And ofcourse, the third print statement will printout a different address entirely, since a new block of memory is created and its address is returned by `new`.
 
-
-
 ---
 
 #### Code exercise
@@ -112,37 +110,28 @@ And ofcourse, the third print statement will printout a different address entire
        }
        void display(){
            System.out.println(String.format("Student Name: %s | Student ID: %d | Student Age: %d.",this.name, this.id, this.age));
-          
+   
        }
    }
-   
    
    public class StudentDemo{
-   
-       public static void main(String[] args){
-       
-       Student s1 = new Student(1, "adam", 20);
-       s1.display();
-       s1.coding();
-       s1.studying();
-       
-       Student s2 = new Student(2, "James", 21);
-       Student s3 = new Student(3, "Eve",20);
-   
-       Student[] group = {s2, s3};
-       
-       for(Student x:  group){
-           System.out.println();
-           x.display();
-           x.coding();
-           x.studying();
-           System.out.println();
-   
-       }
-       }
+       public static void main(String[] args){ 
+           Student s1 = new Student(1, "adam", 20);
+           s1.display();
+           s1.coding();
+           s1.studying(); 
+           Student s2 = new Student(2, "James", 21);
+           Student s3 = new Student(3, "Eve",20); 
+           Student[] group = {s2, s3}; 
+           for(Student x: group){
+               System.out.println();
+               x.display();
+               x.coding();
+               x.studying();
+               System.out.println(); 
+           }
+        }
    }
-   
-   
    ```
    
    output: 
@@ -150,13 +139,10 @@ And ofcourse, the third print statement will printout a different address entire
    ```bash
    Student Name: adam | Student ID: 1 | Student Age: 20.
    Student Name: adam, ID: 1 is coding.
-   Student Name: adam, ID: 1 is studying.
-   
+   Student Name: adam, ID: 1 is studying. 
    Student Name: James | Student ID: 2 | Student Age: 21.
    Student Name: James, ID: 2 is coding.
-   Student Name: James, ID: 2 is studying.
-   
-   
+   Student Name: James, ID: 2 is studying. 
    Student Name: Eve | Student ID: 3 | Student Age: 20.
    Student Name: Eve, ID: 3 is coding.
    Student Name: Eve, ID: 3 is studying.
@@ -244,42 +230,40 @@ And ofcourse, the third print statement will printout a different address entire
        }
    }
    
-   
    class Rectangle{
        int length;
        int breadth;
-   
-       Rectangle(
+        Rectangle{
            int length,
            int breadth
-       ){
+        ){
            this.length = length;
            this.breadth = breadth;
        }
    
        int calArea(){
-           return this.length * this.breadth;
+          return this.length * this.breadth;
        }
    
        int calPerimeter(){
-           return 2*(this.length + this.breadth);
+          return 2*(this.length + this.breadth);
        }
    
-       void display(){
-           System.out.println(String.format("Rectangle Length: %d | Rectange Breadth: %d", this.length, this.breadth));
-       }
+      void display(){
+          System.out.println(String.format("Rectangle Length: %d | Rectange Breadth: %d", this.length, this.breadth));
+      }
    
-       int parameterizedCalArea(int length, int breadth){
-           return length*breadth;
-       }
+      int parameterizedCalArea(int length, int breadth){
+          return length*breadth;
+      }
    
-       int parameterizedCalPerimeter(int length, int breadth){
-           return 2*(length + breadth);
-       }
+      int parameterizedCalPerimeter(int length, int breadth){
+          return 2*(length + breadth);
+      }
    }
    ```
    
-   output:
+   output: 
    
    ```bash
    Rectangle Length: 10 | Rectange Breadth: 20
