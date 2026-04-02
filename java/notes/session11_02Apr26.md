@@ -189,5 +189,5 @@ public void setterVarName(formalArgs){
    output: 
    
    ```bash
-   
+   ID: 1 | Name: Steven | Course: AIML | Age: 20 |
    ```
