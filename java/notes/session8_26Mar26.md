@@ -185,210 +185,213 @@ class ClassName{
 
 1. Write a program to use non-static variables in a class, and access them
    
-   ```java
-   public class NonStaticStudentDemo {
-       public static void main(String[] args) {
-           Student s1 = new Student();
+   - Code:
+     
+     ```java
+     public class NonStaticStudentDemo {
+         public static void main(String[] args) {
+             Student s1 = new Student();
+     
+             System.out.println("Student Id: "+s1.studentId);
+             System.out.println("Student Name: "+s1.name);
+             System.out.println("Student course: "+s1.course);
+             System.out.println("Student marks: "+s1.marks);
+     
+             s1.course = "AI";
+             s1.name = "Sam";
+             s1.marks = 55;
+             s1.studentId = 1;
+     
+             System.out.println("Student Id: "+s1.studentId);
+             System.out.println("Student Name: "+s1.name);
+             System.out.println("Student course: "+s1.course);
+             System.out.println("Student marks: "+s1.marks);
+         }    
+     }
+     
+     class Student{
+         int studentId;
+         int marks;
+         String name;
+         String course;
+     }
+     ```
    
-           System.out.println("Student Id: "+s1.studentId);
-           System.out.println("Student Name: "+s1.name);
-           System.out.println("Student course: "+s1.course);
-           System.out.println("Student marks: "+s1.marks);
-   
-           s1.course = "AI";
-           s1.name = "Sam";
-           s1.marks = 55;
-           s1.studentId = 1;
-   
-           System.out.println("Student Id: "+s1.studentId);
-           System.out.println("Student Name: "+s1.name);
-           System.out.println("Student course: "+s1.course);
-           System.out.println("Student marks: "+s1.marks);
-       }    
-   }
-   
-   class Student{
-       int studentId;
-       int marks;
-       String name;
-       String course;
-   }
-   ```
-   
-   output: 
-   
-   ```bash
-   Student Id: 0
-   Student Name: null
-   Student course: null
-   Student marks: 0
-   Student Id: 1
-   Student Name: Sam
-   Student course: AI
-   Student marks: 55
-   ```
+   - Output: 
+     
+     ```bash
+     Student Id: 0
+     Student Name: null
+     Student course: null
+     Student marks: 0
+     Student Id: 1
+     Student Name: Sam
+     Student course: AI
+     Student marks: 55
+     ```
 
 2. Create a student class with a non parametrized constructor.
    
-   ```java
-   public class NonParameterizedStudent {
-       public static void main(String[] args) {
-           Student s1 = new Student();
-   ```
+   - Code:
+     
+     ```java
+     public class NonParameterizedStudent {
+         public static void main(String[] args) {
+             Student s1 = new Student();
+     
+     
+             System.out.println("Student Id: "+s1.studentId);
+             System.out.println("Student Name: "+s1.name);
+             System.out.println("Student course: "+s1.course);
+             System.out.println("Student marks: "+s1.marks);
+             
+         }
+     }
+     
+     class Student{
+         int studentId, marks;
+         String name, course;
+         public Student(){
+             studentId = 1;
+             name = "Adam";
+             course = "AI";
+             marks = 55;
+         }
+     }
+     ```
    
-           System.out.println("Student Id: "+s1.studentId);
-           System.out.println("Student Name: "+s1.name);
-           System.out.println("Student course: "+s1.course);
-           System.out.println("Student marks: "+s1.marks);
-       
-       }
-   
-   }
-   
-   class Student{
-   
-       int studentId, marks;
-       String name, course;
-       public Student(){
-           studentId = 1;
-           name = "Adam";
-           course = "AI";
-           marks = 55;
-       }
-   
-   }
-
-```
-output: 
-
-```bash
-Student Id: 1
-Student Name: Adam
-Student course: AI
-Student marks: 55
-```
+   - Output:
+     
+     ```bash
+     Student Id: 1
+     Student Name: Adam
+     Student course: AI
+     Student marks: 55
+     ```
 
 3. Make a parameterized constructor for the student class
    
-   ```java
-   public class ParameterizzedStudent {
-       public static void main(String[] args) {
-           Student s1 = new Student("Adam", "AI", 1, 55);
-           Student.displayDetails(s1);
-       }
-   }
+   - Code: 
+     
+     ```java
+     public class ParameterizzedStudent {
+         public static void main(String[] args) {
+             Student s1 = new Student("Adam", "AI", 1, 55);
+             Student.displayDetails(s1);
+         }
+     }
+     
+     class Student{
+         String name, course;
+         int marks, studentId;
+     
+         Student(String a, String b, int c, int d){
+             name = a;
+             course = b;
+             studentId = c;
+             marks = d;
+         }
+     
+         public static void displayDetails(Student x){
+             System.out.println();
+             System.out.println("Student Id: "+x.studentId);
+             System.out.println("Student Name: "+x.name);
+             System.out.println("Student course: "+x.course);
+             System.out.println("Student marks: "+x.marks);
+             System.out.println();
+         }
+     }
+     
+     ```
    
-   class Student{
-       String name, course;
-       int marks, studentId;
-   
-       Student(String a, String b, int c, int d){
-           name = a;
-           course = b;
-           studentId = c;
-           marks = d;
-       }
-   
-       public static void displayDetails(Student x){
-           System.out.println();
-           System.out.println("Student Id: "+x.studentId);
-           System.out.println("Student Name: "+x.name);
-           System.out.println("Student course: "+x.course);
-           System.out.println("Student marks: "+x.marks);
-           System.out.println();
-       }
-   }
-   ```
-
-```
-output:
-
-```bash
-Student Id: 1
-Student Name: Adam
-Student course: AI
-Student marks: 55
-```
+   - Output:
+     
+     ```bash
+     Student Id: 1
+     Student Name: Adam
+     Student course: AI
+     Student marks: 55
+     ```
 
 4. Perform constructor overloading on Student class
    
-   ```java
-   public class OverloadedConstructors {
-       public static void main(String[] args) {
-           Student[] students = {
-               new Student(1, 55),
-               new Student("James", "Programming"),
-               new Student("Evelyn", "Machine Learning"),
-               new Student("John", "Data Science", 4, 84)
-           };
+   - Code: 
+     
+     ```java
+     public class OverloadedConstructors {
+         public static void main(String[] args) {
+             Student[] students = {
+                 new Student(1, 55),
+                 new Student("James", "Programming"),
+                 new Student("Evelyn", "Machine Learning"),
+                 new Student("John", "Data Science", 4, 84)
+             };
+     
+             for(Student x: students){
+                 Student.displayDetails(x);
+             }
+         }
+     }
+     
+     class Student{
+         String name, course;
+         int marks, studentId;
+     
+         Student(String a, int b){
+             name = a;
+             studentId = b;
+         }
+     
+         Student(String a, String b){
+             name = a;
+             course = b;
+         }
+     
+         Student(int a, int b){
+             studentId = a;
+             marks = b;
+         }
+     
+         Student(String a, String b, int c, int d){
+             name = a;
+             course = b;
+             studentId = c;
+             marks = d;
+         }
+     
+         public static void displayDetails(Student x){
+             System.out.println();
+             System.out.println("Student Id: "+x.studentId);
+             System.out.println("Student Name: "+x.name);
+             System.out.println("Student course: "+x.course);
+             System.out.println("Student marks: "+x.marks);
+             System.out.println();
+         }
+     }
+     ```
    
-           for(Student x: students){
-               Student.displayDetails(x);
-           }
-       }
-   }
-   
-   class Student{
-       String name, course;
-       int marks, studentId;
-   
-       Student(String a, int b){
-           name = a;
-           studentId = b;
-       }
-   
-       Student(String a, String b){
-           name = a;
-           course = b;
-       }
-   
-       Student(int a, int b){
-           studentId = a;
-           marks = b;
-       }
-   
-       Student(String a, String b, int c, int d){
-           name = a;
-           course = b;
-           studentId = c;
-           marks = d;
-       }
-   
-       public static void displayDetails(Student x){
-           System.out.println();
-           System.out.println("Student Id: "+x.studentId);
-           System.out.println("Student Name: "+x.name);
-           System.out.println("Student course: "+x.course);
-           System.out.println("Student marks: "+x.marks);
-           System.out.println();
-       }
-   }
-   ```
-   
-   output: 
-   
-   ```bash
-   Student Id: 1
-   Student Name: null
-   Student course: null
-   Student marks: 55
-   ```
-   
-   Student Id: 0
-   Student Name: James
-   Student course: Programming
-   Student marks: 0
-   
-   Student Id: 0
-   Student Name: Evelyn
-   Student course: Machine Learning
-   Student marks: 0
-   
-   Student Id: 4
-   Student Name: John
-   Student course: Data Science
-   Student marks: 84
-
-```
-
-```
+   - Output:
+     
+     ```bash
+     Student Id: 1
+     Student Name: null
+     Student course: null
+     Student marks: 55
+     
+     Student Id: 0
+     Student Name: James
+     Student course: Programming
+     Student marks: 0
+     
+     Student Id: 0
+     Student Name: Evelyn
+     Student course: Machine Learning
+     Student marks: 0
+     
+     Student Id: 4
+     Student Name: John
+     Student course: Data Science
+     Student marks: 84
+     ```
+     
+     
