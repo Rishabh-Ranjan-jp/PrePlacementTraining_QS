@@ -14,25 +14,20 @@ There are 3 things that can be defined for a class(class members):
 
 #### Classification of Class Members
 
-1. Global Members
-   
-   1. Static Members
-      
-      1. Variables
-      
-      2. Initializers
-      
-      3. Methods
-   
-   2. Non-static Members
-      
-      1. Variables
-      
-      2. Initializer
-      
-      3. Methods
-
-2. Local Members -- Variables
+```mermaid
+flowchart TB
+    A[Class Members] --> B[Global Members]
+    A --> C[Local Members]
+    C --> D[Variables]
+    B --> E[Static Members]
+    B --> F[Non-Static Members]
+    E --> ee[Variables]
+    E --> eee[Initializers]
+    E --> eeee[Methods]
+    F --> ff[Variables]
+    F --> fff[Initializers]
+    F --> ffff[Methods]
+```
 
 ##### Global Members
 
@@ -184,8 +179,6 @@ class ClassName{
 }
 ```
 
-
-
 ---
 
 #### Code exercise
@@ -206,7 +199,7 @@ class ClassName{
            s1.name = "Sam";
            s1.marks = 55;
            s1.studentId = 1;
-       
+   
            System.out.println("Student Id: "+s1.studentId);
            System.out.println("Student Name: "+s1.name);
            System.out.println("Student course: "+s1.course);
@@ -241,17 +234,19 @@ class ClassName{
    public class NonParameterizedStudent {
        public static void main(String[] args) {
            Student s1 = new Student();
-   
+   ```
    
            System.out.println("Student Id: "+s1.studentId);
            System.out.println("Student Name: "+s1.name);
            System.out.println("Student course: "+s1.course);
            System.out.println("Student marks: "+s1.marks);
-           
+       
        }
+   
    }
    
    class Student{
+   
        int studentId, marks;
        String name, course;
        public Student(){
@@ -260,17 +255,18 @@ class ClassName{
            course = "AI";
            marks = 55;
        }
+   
    }
-   ```
-   
-   output: 
-   
-   ```bash
-   Student Id: 1
-   Student Name: Adam
-   Student course: AI
-   Student marks: 55
-   ```
+
+```
+output: 
+
+```bash
+Student Id: 1
+Student Name: Adam
+Student course: AI
+Student marks: 55
+```
 
 3. Make a parameterized constructor for the student class
    
@@ -302,18 +298,17 @@ class ClassName{
            System.out.println();
        }
    }
-   
-   
    ```
-   
-   output:
-   
-   ```bash
-   Student Id: 1
-   Student Name: Adam
-   Student course: AI
-   Student marks: 55
-   ```
+
+```
+output:
+
+```bash
+Student Id: 1
+Student Name: Adam
+Student course: AI
+Student marks: 55
+```
 
 4. Perform constructor overloading on Student class
    
@@ -373,27 +368,27 @@ class ClassName{
    output: 
    
    ```bash
-   
    Student Id: 1
    Student Name: null
    Student course: null
    Student marks: 55
-   
+   ```
    
    Student Id: 0
    Student Name: James
    Student course: Programming
    Student marks: 0
    
-   
    Student Id: 0
    Student Name: Evelyn
    Student course: Machine Learning
    Student marks: 0
    
-   
    Student Id: 4
    Student Name: John
    Student course: Data Science
    Student marks: 84
-   ```
+
+```
+
+```
